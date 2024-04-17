@@ -7,18 +7,22 @@
     <groupId>com.zyneonstudios</groupId>
     <artifactId>verget</artifactId>
     <version>2024.4</version>
-
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <packaging>pom</packaging>
 
     <modules>
         <module>verget-fabric</module>
         <module>verget-forge</module>
         <module>verget-minecraft</module>
         <module>verget-quilt</module>
+        <module>verget-all</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

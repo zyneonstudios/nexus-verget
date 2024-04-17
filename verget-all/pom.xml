@@ -10,7 +10,7 @@
         <version>2024.4</version>
     </parent>
 
-    <artifactId>verget-fabric</artifactId>
+    <artifactId>verget-all</artifactId>
     <version>2024.4-beta.1</version>
 
     <properties>
@@ -18,6 +18,29 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zyneonstudios</groupId>
+            <artifactId>verget-fabric</artifactId>
+            <version>2024.4-beta.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zyneonstudios</groupId>
+            <artifactId>verget-forge</artifactId>
+            <version>2024.4-beta.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zyneonstudios</groupId>
+            <artifactId>verget-minecraft</artifactId>
+            <version>2024.4-beta.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zyneonstudios</groupId>
+            <artifactId>verget-quilt</artifactId>
+            <version>2024.4-beta.1</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <resources>
@@ -34,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.zyneonstudios.verget.fabric.FabricVerget</mainClass>
+                            <mainClass>com.zyneonstudios.verget.Verget</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -64,7 +87,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.zyneonstudios.verget.fabric.FabricVerget</mainClass>
+                                    <mainClass>com.zyneonstudios.verget.Verget</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -73,4 +96,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

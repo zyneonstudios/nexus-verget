@@ -23,8 +23,8 @@ public class QuiltVerget {
         return list;
     }
 
-    public static ArrayList<String> getVersions(String gameVersion) {
-        JsonArray versions = new Gson().fromJson(getFromURL("https://meta.quiltmc.org/v3/versions/loader/"+gameVersion),JsonArray.class);
+    public static ArrayList<String> getVersions(String minecraftVersion) {
+        JsonArray versions = new Gson().fromJson(getFromURL("https://meta.quiltmc.org/v3/versions/loader/"+minecraftVersion),JsonArray.class);
         ArrayList<String> list = new ArrayList<>();
         for(JsonElement element:versions) {
             JsonObject json = element.getAsJsonObject().get("loader").getAsJsonObject();
