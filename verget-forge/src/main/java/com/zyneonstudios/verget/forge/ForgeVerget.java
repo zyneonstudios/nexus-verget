@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ForgeVerget {
 
@@ -16,6 +17,7 @@ public class ForgeVerget {
         for(String version:getSupportedMinecraftVersions()) {
             versions.addAll(getVersions(version));
         }
+        Collections.reverse(versions);
         return versions;
     }
 
@@ -27,6 +29,7 @@ public class ForgeVerget {
         for(JsonElement element:array) {
             versions.add(element.getAsString().replace("\"",""));
         }
+        Collections.reverse(versions);
         return versions;
     }
 
