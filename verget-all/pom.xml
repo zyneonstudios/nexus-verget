@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>verget-all</artifactId>
-    <version>2024.4-beta.2</version>
+    <version>2024.4</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -23,22 +23,22 @@
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-fabric</artifactId>
-            <version>2024.4-beta.2</version>
+            <version>2024.4</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-forge</artifactId>
-            <version>2024.4-beta.2</version>
+            <version>2024.4</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-minecraft</artifactId>
-            <version>2024.4-beta.2</version>
+            <version>2024.4</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-quilt</artifactId>
-            <version>2024.4-beta.2</version>
+            <version>2024.4</version>
         </dependency>
     </dependencies>
 

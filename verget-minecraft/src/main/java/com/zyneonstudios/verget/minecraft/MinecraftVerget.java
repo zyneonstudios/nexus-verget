@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MinecraftVerget {
 
-    public static ArrayList<String> getVersions(boolean experimentalVersions) {
+    public static ArrayList<String> getVersions(Filter versionType) {
         ArrayList<String> versions = new ArrayList<>();
         String json = getFromURL("https://api.modrinth.com/v2/tag/game_version");
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -21,7 +21,11 @@ public class MinecraftVerget {
         for(JsonElement element:array) {
             String type = element.getAsJsonObject().get("version_type").getAsString().replace("\"","");
             if(type.equals("snapshot") || type.equals("alpha") || type.equals("beta")) {
-                if(!experimentalVersions) {
+                if(versionType.equals(Filter.RELEASES)) {
+                    continue;
+                }
+            } else {
+                if(versionType.equals(Filter.EXPERIMENTAL)) {
                     continue;
                 }
             }
@@ -30,7 +34,7 @@ public class MinecraftVerget {
         return versions;
     }
 
-    public static ArrayList<String> getVersions(boolean experimentalVersions, String filter) {
+    public static ArrayList<String> getVersions(Filter versionType, String filter) {
         ArrayList<String> versions = new ArrayList<>();
         String json = getFromURL("https://api.modrinth.com/v2/tag/game_version");
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -39,7 +43,11 @@ public class MinecraftVerget {
             String version = element.getAsJsonObject().get("version").getAsString().replace("\"","");
             String type = element.getAsJsonObject().get("version_type").getAsString().replace("\"","");
             if(type.equals("snapshot") || type.equals("alpha") || type.equals("beta")) {
-                if(!experimentalVersions) {
+                if(versionType.equals(Filter.RELEASES)) {
+                    continue;
+                }
+            } else {
+                if(versionType.equals(Filter.EXPERIMENTAL)) {
                     continue;
                 }
             }
@@ -67,5 +75,11 @@ public class MinecraftVerget {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public enum Filter {
+        EXPERIMENTAL,
+        RELEASES,
+        BOTH
     }
 }
