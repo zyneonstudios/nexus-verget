@@ -33,12 +33,12 @@ public class Verget {
         return ForgeVerget.getSupportedMinecraftVersions();
     }
 
-    public static ArrayList<String> getMinecraftVersions(boolean showExperimental) {
-        return MinecraftVerget.getVersions(showExperimental);
+    public static ArrayList<String> getMinecraftVersions(MinecraftVerget.Filter versionType) {
+        return MinecraftVerget.getVersions(versionType);
     }
 
-    public static ArrayList<String> getMinecraftVersions(boolean showExperimental, String filter) {
-        return MinecraftVerget.getVersions(showExperimental, filter);
+    public static ArrayList<String> getMinecraftVersions(MinecraftVerget.Filter versionType, String filter) {
+        return MinecraftVerget.getVersions(versionType, filter);
     }
 
     public static ArrayList<String> getQuiltVersions() {
