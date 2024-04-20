@@ -1,4 +1,4 @@
-# nexus-verget
+# nexus-verget `Java 21`
 
 A library to get all available for Minecraft and some of its modloaders.<br>
 Supported modloaders: Fabric, Forge & Quilt<br>
