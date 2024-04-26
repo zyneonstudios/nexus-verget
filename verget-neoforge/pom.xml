@@ -10,7 +10,7 @@
         <version>2024.4.2</version>
     </parent>
 
-    <artifactId>verget-quilt</artifactId>
+    <artifactId>verget-neoforge</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -33,7 +33,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.zyneonstudios.verget.quilt.QuiltVerget</mainClass>
+                            <mainClass>com.zyneonstudios.verget.neoforge.NeoForgeVerget</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -63,7 +63,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.zyneonstudios.verget.quilt.QuiltVerget</mainClass>
+                                    <mainClass>com.zyneonstudios.verget.neoforge.NeoForgeVerget</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

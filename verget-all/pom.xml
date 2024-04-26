@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.zyneonstudios</groupId>
         <artifactId>nexus-verget</artifactId>
-        <version>2024.4.1</version>
+        <version>2024.4.2</version>
     </parent>
 
     <artifactId>verget-all</artifactId>
@@ -22,22 +22,27 @@
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-fabric</artifactId>
-            <version>2024.4</version>
+            <version>2024.4.2</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-forge</artifactId>
-            <version>2024.4</version>
+            <version>2024.4.2</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-minecraft</artifactId>
-            <version>2024.4</version>
+            <version>2024.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zyneonstudios</groupId>
+            <artifactId>verget-neoforge</artifactId>
+            <version>2024.4.2</version>
         </dependency>
         <dependency>
             <groupId>com.zyneonstudios</groupId>
             <artifactId>verget-quilt</artifactId>
-            <version>2024.4</version>
+            <version>2024.4.2</version>
         </dependency>
     </dependencies>
 

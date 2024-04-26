@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.zyneonstudios</groupId>
         <artifactId>nexus-verget</artifactId>
-        <version>2024.4.1</version>
+        <version>2024.4.2</version>
     </parent>
 
     <artifactId>verget-forge</artifactId>
@@ -33,7 +33,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.zyneonstudios.verget.forge.ForgeVerget</mainClass>
+                            <mainClass>com.zyneonstudios.verget.com.zyneonstudios.verget.neoforge.NeoForgeVerget</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -63,7 +63,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.zyneonstudios.verget.forge.ForgeVerget</mainClass>
+                                    <mainClass>com.zyneonstudios.verget.com.zyneonstudios.verget.neoforge.NeoForgeVerget</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
