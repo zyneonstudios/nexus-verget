@@ -34,7 +34,7 @@ public class NeoForgeVerget {
         JsonArray array = gson.fromJson(getFromURL(metaUrl),JsonObject.class).get("versions").getAsJsonArray();
         for(JsonElement element:array) {
             String version = element.getAsString();
-            if(version.contains(minecraftVersion)) {
+            if(version.startsWith(minecraftVersion)) {
                 versions.add(element.getAsString().replace("\"", ""));
             }
         }

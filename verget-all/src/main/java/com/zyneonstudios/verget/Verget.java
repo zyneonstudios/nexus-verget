@@ -3,6 +3,7 @@ package com.zyneonstudios.verget;
 import com.zyneonstudios.verget.fabric.FabricVerget;
 import com.zyneonstudios.verget.forge.ForgeVerget;
 import com.zyneonstudios.verget.minecraft.MinecraftVerget;
+import com.zyneonstudios.verget.neoforge.NeoForgeVerget;
 import com.zyneonstudios.verget.quilt.QuiltVerget;
 
 import java.util.ArrayList;
@@ -35,6 +36,18 @@ public class Verget {
 
     public static ArrayList<String> getMinecraftVersions(MinecraftVerget.Filter versionType) {
         return MinecraftVerget.getVersions(versionType);
+    }
+
+    public static ArrayList<String> getNeoForgeVersions() {
+        return NeoForgeVerget.getVersions();
+    }
+
+    public static ArrayList<String> getNeoForgeVersions(String minecraftVersion) {
+        return NeoForgeVerget.getVersions(minecraftVersion);
+    }
+
+    public static ArrayList<String> getNeoForgeGameVersions() {
+        return NeoForgeVerget.getSupportedMinecraftVersions();
     }
 
     public static ArrayList<String> getMinecraftVersions(MinecraftVerget.Filter versionType, String filter) {
