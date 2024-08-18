@@ -6,7 +6,7 @@
 
     <groupId>com.zyneonstudios</groupId>
     <artifactId>nexus-verget</artifactId>
-    <version>2024.6</version>
+    <version>2024.8</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -29,22 +29,8 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Repository</name>
-            <url>https://maven.pkg.github.com/zyneonstudios/zyneon-maven</url>
+            <id>zyneonstudios-repo</id>
+            <url>http://maven.zyneonstudios.com:8080/releases</url>
         </repository>
     </distributionManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <altDeploymentRepository>github::default::https://maven.pkg.github.com/zyneonstudios/zyneon-maven</altDeploymentRepository>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

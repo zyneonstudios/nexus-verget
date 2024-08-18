@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.zyneonstudios</groupId>
         <artifactId>nexus-verget</artifactId>
-        <version>2024.6</version>
+        <version>2024.8</version>
     </parent>
 
     <artifactId>verget-fabric</artifactId>
