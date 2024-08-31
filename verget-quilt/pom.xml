@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.zyneonstudios</groupId>
-        <artifactId>nexus-verget</artifactId>
-        <version>2024.8</version>
+        <groupId>com.zyneonstudios.nexus</groupId>
+        <artifactId>verget</artifactId>
+        <version>2024.8.1</version>
     </parent>
 
     <artifactId>verget-quilt</artifactId>
